@@ -1,0 +1,57 @@
+body{
+	background:black;
+}
+#main{
+	width:500px;
+	margin:250px auto;
+	overflow: auto;
+}
+#sec,#hour{
+	margin:50px auto;
+	width:200px;
+	overflow: auto;
+	float:left;
+}
+.display{
+	margin:auto;
+	width:100px;
+	float:left;
+}
+.div,.div1,.div2,.div3{
+	width:60px;
+	height:60px;
+	background-color: red;
+	margin:0px;
+	margin-bottom:0px;
+}
+#a1,#b1,#c1,#d1{
+	height:5px;
+}
+#a2,#b2,#c2,#d2{
+	width:5px;
+	margin-left:45px;
+	display: inline-block;
+}
+#a3,#b3,#c3,#d3{
+	width:5px;
+	margin-left:45px;
+	display: inline-block;
+	margin-bottom:0px;
+}
+#a4,#b4,#c4,#d4{
+	height: 5px;
+}
+#a5,#b5,#c5,#d5{
+	width:5px;
+	display: inline-block;
+	//margin:0px;
+}
+#a6,#b6,#c6,#d6{
+	width:5px;
+	display: inline-block;
+	margin:0px;
+}
+#a7,#b7,#c7,#d7{
+	height: 5px;
+}
+

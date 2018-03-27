@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Algirothm</title>
+    </head>
+    <style>
+        h1{
+            width:100%;
+            margin:auto;
+            padding:1%;
+            text-align:center;
+        }
+        #img{
+            width:25%;
+            border:1px solid black;
+            text-align: center;
+            margin:auto;
+            padding:1%;
+        }
+        img{
+            margin:auto;
+        }
+        #encryptDiv{
+        }
+    </style>
+    <body>
+        <h1>ROT13 Algorithm</h1>
+        <div id = "img" ><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/ROT13_table_with_example.svg/480px-ROT13_table_with_example.svg.png" width = "350" height = "150"  ><p>ROT13 replaces each letter by its partner 13 characters further along the alphabet. For example, HELLO becomes URYYB (or, conversely, URYYB becomes HELLO again).</p></div>
+        <div id = "encryptDiv" >
+            <input type = "text" id = "encrypt" placeholder = "Enter the Text to encrypt" >
+            <button onclick = "encrypt()" >Submit</button>
+            <input type = "textarea" id = "decryptShow" >
+        </div>   
+        <div></div> 
+            <input type = "text" id = "decrypt" placeholder="Enter the Text to decrypt" >
+            <button onclick = "decrypt()" >Submit</button>
+            <input type = "textarea" id = "encryptShow"  >
+        <script>
+            function id(idd){
+                return document.getElementById(idd);
+            }
+            function encrypt(){
+                var envalue = id('encrypt').value;
+                var devalue = '' ;
+                for(var i = 0; i < envalue.length; i++){
+                    if(envalue.charAt(i) != ' ' ){
+                        var code = envalue.charAt(i).charCodeAt(0);
+                        code = code + 24;
+                        if(code > 122){
+                            code = code - 122;
+                            code = code + 96;
+                        }
+                        devalue += String.fromCharCode(code);
+                    }
+                    else {
+                        devalue += envalue.charAt(i);
+                    }    
+                }
+                id("decryptShow").value = devalue;
+            }
+            function decrypt(){
+                var devalue = id("decrypt").value;
+                var envalue = "" ;
+                for(var i = 0; i < devalue.length; i++){
+                    if(devalue.charAt(i) != " " ){
+                        var code = devalue.charAt(i).charCodeAt(0);
+                        code = code - 24;
+                        if(code < 97){
+                            code = code + 26;
+                        }
+                        envalue += String.fromCharCode(code);
+                    }
+                    else{
+                        envalue += devalue.charAt(i);
+                    }    
+                }
+                id("encryptShow").value = envalue;
+            }
+        </script>
+    </body>
+</html>

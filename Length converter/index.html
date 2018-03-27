@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>CONVERTER</title>
+		<style>
+			#whole{
+				margin:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = 'whole'>
+			<div>
+				<h1>Length</h1>
+			</div>
+			<div>
+				<input type = "text" id = "input" value="" />
+				<select id = 'ipSub' onchange = 'run()'>
+					<option>Select</option>
+					<option value = 'km' >Kilometer  </option >
+					<option value = 'm'  >Metre      </option>
+					<option value = 'cm' >Centimetre </option>
+					<option value = 'mm' >Millimetre </option>
+				</select>
+			</div>
+			=
+			<div>
+				<input type = "text" id = "output"  />
+				<select id = 'opSub' onchange = 'run()'>
+					<option>Select</option>
+					<option value = 'opkm' >Kilometer  </option >
+					<option value = 'opm'  >Metre 	   </option>
+					<option value = 'opcm' >Centimetre </option>
+					<option value = 'opmm' >Millimetre </option>
+				</select>
+			</div>
+		</div>
+		<script>
+			function $(idd){
+				return document.getElementById(idd);
+			}
+			function run(){
+				var input = parseInt($('input').value);
+				if($('ipSub').value == 'km' && $('opSub').value == 'opkm'){
+					$('output').value = input;
+				}
+				if($('ipSub').value == 'km' && $('opSub').value == 'opm'){
+					$('output').value = input*1000;
+				}
+				if($('ipSub').value == 'km' && $('opSub').value == 'opcm'){
+					$('output').value = input*100000;
+				}
+				if($('ipSub').value == 'km' && $('opSub').value == 'opmm'){
+					$('output').value = input*1000000;
+				}
+
+
+				if($('ipSub').value == 'm' && $('opSub').value == 'opkm'){
+					$('output').value = input/1000;
+				}
+				if($('ipSub').value == 'm' && $('opSub').value == 'opm'){
+					$('output').value = input;
+				}
+				if($('ipSub').value == 'm' && $('opSub').value == 'opcm'){
+					$('output').value = input*100;
+				}
+				if($('ipSub').value == 'm' && $('opSub').value == 'opmm'){
+					$('output').value = input*1000;
+				}
+
+
+				if($('ipSub').value == 'cm' && $('opSub').value == 'opkm'){
+					$('output').value = input/100000;
+				}
+				if($('ipSub').value == 'cm' && $('opSub').value == 'opm'){
+					$('output').value = input/100;
+				}
+				if($('ipSub').value == 'cm' && $('opSub').value == 'opcm'){
+					$('output').value = input;
+				}
+				if($('ipSub').value == 'cm' && $('opSub').value == 'opmm'){
+					$('output').value = input*10;
+				}
+
+
+				if($('ipSub').value == 'mm' && $('opSub').value == 'opkm'){
+					$('output').value = input/1000000;
+				}
+				if($('ipSub').value == 'mm' && $('opSub').value == 'opm'){
+					$('output').value = input/1000;
+				}
+				if($('ipSub').value == 'mm' && $('opSub').value == 'opcm'){
+					$('output').value = input*10;
+				}
+				if($('ipSub').value == 'mm' && $('opSub').value == 'opmm'){
+					$('output').value = input;
+				}
+			}
+		</script>
+	</body>
+</html>

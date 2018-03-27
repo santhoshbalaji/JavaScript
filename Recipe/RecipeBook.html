@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+	<head>
+		<title> MY COOK BOOK. </title>
+		<script src = "Jsonfile.js"></script>
+		<script src = "RecipeBook.js"></script>
+		<!-- <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">  -->
+		<link href="https://fonts.googleapis.com/css?family=Asap+Condensed|Cinzel|Courgette" rel="stylesheet"> 
+		<link rel = "stylesheet" href = "RecipeBookCss.css"></link>
+	</head>
+	<body onload = "init()">
+		<div id = "Maindiv">
+			<div id = "Box">
+				<h2>Recipe Book</h2>
+				<h2>Store your recipes here! Once saved, you can come back later to see your recipes</h2>
+			</div>
+			<div id = "Div">	
+			</div>	
+			<button id = "Add" onclick = "display()">Add Recipe</button>	
+			<div id = "FormDiv" onclick="display()" >			
+				<div id = "Form">
+					<h6>Add Recipe <button id = "g" onclick = "display()"><span>&#215;</span></button></h6>
+						<h4 class = "H" >Recipe : </h4> 
+						<input class = "H" type = "text" id = "U" placeholder = "Recipe Name"  height = "100">
+						<h4 class = "H" >Type : </h4>
+						<input class = "H" type = "text" id = "Uu" placeholder = "Enter Type of recipe" >
+						<h4 class = "H" >Ingredients : </h4>
+						<input class = "H" type = "text" id = "u" placeholder = "Enter Ingredients ,Comma Seperated " >
+						<hr>
+						<div id = "Btn">	
+							<button class = "F" id = "f"  onclick  =   "New()">New Recipes</button>
+							<button class = "F" id = "f1" onclick  =  "display()">Cancel</button>
+						</div>
+				</div>
+			</div>	
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+*{
+	box-sizing:border-box;
+}
+body{
+
+	-webkit-transition:all 1s;
+}
+html{
+	width:100%;
+}
+#MyDiv{
+	width:50%;
+	margin:5% auto;
+	//overflow: scroll;
+	transition:all 1s;
+}
+#MyTable{
+	width:100%;
+	-webkit-perspective:100px;
+}
+td{
+	width:50%;
+	/*border:1px solid black;*/
+	text-align: center;
+	font-size:2.5vh;
+	margin:0px;
+	padding:0px;
+}

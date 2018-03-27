@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<title>Magic array</title>
+		<style>
+			body,html{
+				width:100%;
+				height:100%;
+				margin:auto;
+			}
+			#whole{
+				margin:50px auto;
+				//border:1px solid red;
+			}
+			/*h1{
+				text-align:center;
+				color:rgba(22,145,178,0.9);
+				background:rgba(115, 115, 115,0.5);
+				height:20px;
+				padding-top:40px;
+				font-size: 50px;
+			}*/
+			.div{
+				width:50px;
+				//height:50px;
+				display:inline-block;
+				//border:1px solid blue;
+				//margin:2px;
+				//padding:20px;
+				font-size: 20px;
+				text-align: center;
+				padding:10px;
+				//transition:all 3s;
+
+			}
+			.div:hover{
+				background:rgba(204, 204, 204,0.5);
+			}
+			input{
+				margin-left:840px;
+				margin-top:30px;
+				text-align:center;
+				color:rgba(20,45,178,0.9);
+
+			}
+			style[contenteditable]{
+				width:700px;
+				margin:auto;
+				display:block;
+				background-color: black;
+				color:white;
+				white-space:pre;
+			}
+		</style>
+	</head>
+	<body>
+		<style contenteditable >
+			h1{
+				text-align:center;
+				color:rgba(22,145,178,0.9);
+				background:rgba(115, 115, 115,0.5);
+				padding-top:40px;
+				font-size: 50px;
+			}
+		</style>
+		<h1>MAGIC SQUARE</h1>
+		<input type = "text" id = "input" placeholder = "Enter an odd number" onchange = "run()" />
+
+		<div id = "whole" onchange = "run()">
+
+		</div>
+		<script>
+			function id(idd){
+				return document.getElementById(idd);
+			}
+			function run(){
+				var num = parseInt(id("input").value);
+				var n = parseInt((num * 50) + (num + num) + (num * 20));
+				console.log(num);
+				var htmlElements = "";
+				var br = "";
+				var temp = 1;
+				var array = [];
+				var container = id("whole");
+				console.log(container);
+				for(var i = 0; i < num; i ++){
+					array[i] = new Array(num);
+				}
+				var row = 0;
+				var col = parseInt(num/2);
+				var data = 1;
+				//array[i][j] = 0;
+				array[row][col] = data;
+				while(data < (num *num)){
+					if ((row == 0) && (col == num - 1)){
+					row = 1;
+					col = num - 1;
+					array[row][col] = ++data;
+					continue;
+					}
+					row --;
+					if (row < 0){
+						row = num - 1;
+					}
+					col ++;
+					if (col >= num){
+						col = 0;
+
+					}
+					if (array[row][col] > 0){
+						row = row + 2;
+						col --;
+
+
+
+					}
+					array[row][col] = ++data;
+				}
+
+				for (var i = 0; i < num; i++) {
+
+					for(var j = 0; j < num; j++){
+						var r = Math.round(Math.random() * 255);
+						var g = Math.round(Math.random() * 255);
+						var b = Math.round(Math.random() * 255);
+
+						htmlElements += "<div class='div' id = 'div"+temp+"' style = 'border:1px solid rgb("+r+","+g+","+b+");color:rgb("+r+","+g+","+b+");transition:background 0.1s'>"+array[i][j]+"</div>";
+						//var container1 = id("div"+temp);
+						//container1.style.border = "1px solid rgb("+r+","+g+","+b+")";
+						temp++;
+					}
+
+				}
+				container.style.border = "1px solid blue";
+				container.style.width = n+"px";
+				//container.style.height = n+"px";
+				container.innerHTML = htmlElements;
+
+				id('input').value = '';
+
+			}
+
+
+		</script>
+	</body>
+</html>

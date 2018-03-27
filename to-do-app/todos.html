@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="todo.png" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:800" rel="stylesheet"> <!--font link-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <!--del link-->
+     <link rel="stylesheet" href="todo.css"> <!--own style link-->
+     <script src="todo.js"> </script> <!--own script link-->
+    <title>Todo App</title>
+  </head>
+  <body>
+    <header> <h2 class="heading">todos</h2> </header>
+
+    <section class="newNote">
+        <input type="text" id="insertNote" onkeyup="store(event)" required="">
+        <label class="placeholder" for="insertNote">Things to do... </label>
+    </section>
+    <div id="show"></div>
+    <div id="incomp"></div>
+    <div id="comp"></div>
+    <div id="a1" class="style borderch" onclick="ch(1)">ALL</div>
+    <div id="a2" class="style over" onclick="ch(2)">INCOMPLETE</div>
+    <div id="a3" class="style over" onclick="ch(3)">COMPLETED</div>
+  </body>
+
+</html>

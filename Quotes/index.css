@@ -1,0 +1,44 @@
+*{
+	box-sizing:border-box;
+}
+html,body{
+	width:100%;
+	margin:0px; 
+	/*background:black;*/
+	font-family: 'Raleway', sans-serif;
+}
+#Quotes{
+	position: absolute;
+	top:30%;
+	left:25%;
+	width:50%;
+	padding:2%;
+	background: white;
+	font-size: 2.2vh;
+} 
+#Display{
+	padding:1%;
+}
+#Name{
+	margin-top:3%;
+	padding:2%;
+	text-align: center;
+}
+#Next{
+	padding:1%; 
+	margin-top:1.2%;
+	margin-left:80%;
+	border-color:transparent;	
+	color:white;
+}
+#Icon{
+	width:7vh;
+	height:7vh;
+	padding:1%;
+	/* color:white; */
+	position:absolute;
+}
+img{
+	width:5vh;
+	height:5vh;
+}

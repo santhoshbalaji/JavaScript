@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Contacts</title>
+		<link rel = "stylesheet" href = "index.css" />
+		<link href="https://fonts.googleapis.com/css?family=Abel|Encode+Sans+Condensed" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body onclick = "inside()">
+		<div id = "topbar">
+			<button id = "menu" onclick = "sidebar()" class = "straight" ><i class="material-icons" style="font-size:45px;color:white">reorder</i></button>
+			<h1 class = "straight" style = "font-size:30px;margin-left:50px;margin-top:0.3%">Google Contacts</h1>
+			<input type = 'text' onkeyup = 'search()' id = 'search' placeholder = "Search" size = '50' />
+		</div>
+		<div id = 'downbar' style = "width:100%;" >
+			<div id = 'sidebar' style = "width:15%;border-right:1px solid rgb(191, 191, 191);float:left;height:93%;">
+				<div id = "contacts" onclick = "show()" style = "font-size:20px;" ><i class="material-icons" style="cursor:pointer;margin-right:3vh;font-size:22px;">contacts</i>Contacts()</div>
+				<div id = "Fav" onclick = "Favshow()" style = "font-size:20px;" ><i class="material-icons" style="cursor:pointer;margin-right:3vh;font-size:22px;">people</i>Favorites()</div>
+			</div>	
+			<div id = 'main' style = "overflow:auto;width:85%;float:left;height:93%;transition:1s width;">
+				<div id = "name" style = "width:50%;float:left;height:100%;">
+				</div>
+				<div id = "number" style = "width:50%;float:left;height:100%;">
+				</div>
+			</div>
+		</div>	
+		<div id = "New" onclick = "New()" style = "position:absolute;top:93%;left:96%"><button style = "outline:none;cursor:pointer;background:rgb(255, 51, 133)
+;border-width:0px;border-radius:50%;width:50px;height:50px"><i class="material-icons" style="font-size:36px">add</i></button></div>
+		<div id = "Prompt" style = "overflow:auto;position:absolute;width:50%;height:30%;top:30%;left:30%;border:1px solid rgb(204, 204, 204)">
+			<div style = "background:rgb(204, 204, 204);height:20%;">
+				<h2 style = "margin:0px;padding:1%;margin-left:2%;font-family: 'Encode Sans Condensed', sans-serif;">Create Contact</h2>
+			</div>
+			<div style = "width:30%;float:left;text-align:center;">
+				<h3 style = "margin:5%;"><i class="material-icons" style="font-size:36px">account_box</i></h3>
+				<h3 style = "margin:5%;"><i class="material-icons" style="font-size:36px">call</i></h3>
+			</div>
+			<div style = "width:70%;float:left;"> 
+				<input type = "text" id = "newname" placeholder = "Enter Name" style = "background:transparent;height:20%;width:100%;border-width:0px;border-bottom:1px solid rgb(0, 82, 204);">
+				<input type = "text" id = "newnumber" placeholder = "Enter Number" style = "background:transparent;height:20%;width:100%;border-width:0px;border-bottom:1px solid rgb(0, 82, 204);">
+				<span>Add to Favorites</span> <input type = "checkbox" id = "check" style = "cursor:pointer;"/>
+			</div>
+			<div style = "width:100%;float:left;margin-top:5%;">
+				<button onclick = 'getcontact()' style = "cursor:pointer;font-family: 'Encode Sans Condensed', sans-serif;background:transparent;border-width:0px;width:50%;float:left;margin-top:0%;text-align:center;outline:none;font-size:20px;color:rgb(0, 82, 204)">Save</button>
+				<button onclick = "New()" style = "cursor:pointer;font-family: 'Encode Sans Condensed', sans-serif;background:transparent;border-width:0px;width:50%;float:left;margin-top:0%;text-align:center;outline:none;font-size:20px;color:rgb(0, 82, 204)">Cancel</button>
+			</div>
+		</div>
+		<div id = "smalldiv" >
+		</div>
+		<script src = "index.js" ></script>
+	</body>
+</html>

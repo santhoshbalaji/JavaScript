@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>Music</title>
+		<style>
+			body{
+				background:url("https://s-media-cache-ak0.pinimg.com/originals/47/56/bc/4756bce8b89554a70db68131b0ec15c0.jpg");
+				background-size: cover;
+			}
+			#main{
+					border:1px solid tomato;
+					height:800px;
+					width:1500px;
+					background-color:white;
+					margin:100px auto;
+					color:white;
+					background:url("https://s-media-cache-ak0.pinimg.com/originals/47/56/bc/4756bce8b89554a70db68131b0ec15c0.jpg");
+					background-size: ;
+				}
+			.one{
+					//border:2px solid green;
+					height:100px;
+					width:1300px;
+					margin:60px auto;
+				}
+			.one > div{
+						border:3px solid red;
+						height:80px;
+						width:80px;
+						float:left;
+						margin:10px;
+						background-color:black;
+						text-align:center;
+						font-size:32px;
+						border-radius:20px;
+						padding:10px;
+					
+					}		
+				
+			.two{
+					//border:2px solid green;
+					height:100px;
+					width:1200px;
+					margin:60px auto;
+				}
+			.two > div{
+						border:3px solid blue;
+						height:80px;
+						width:80px;
+						float:left;
+						margin:10px;
+						background-color:black;
+						text-align:center;
+						font-size:32px;
+						border-radius:20px;
+						padding:10px;
+					}	
+			.three{
+					//border:2px solid green;
+					height:100px;
+					width:1000px;
+					margin:60px auto;
+				}
+			.three > div{
+						border:3px solid pink;
+						height:80px;
+						width:80px;
+						float:left;
+						margin:10px;
+						background-color:black;
+						text-align:center;
+						font-size:32px;
+						border-radius:20px;
+						padding:10px;
+					}	
+			h1{
+				color:black;
+				text-align:center;
+				
+				font-size:40px;
+			  }	
+			h2{
+				color:black;
+				text-align:right;
+				
+				font-size:50px;
+			  }  					
+		</style>
+	</head>
+	<body onkeydown="keyDownMusic(event)" onkeyup = "KeyUpMusic(event)">
+		<script src="music.js"></script>
+			<div id="main">
+				<div class="one">
+					<div id="sub81">Q<audio id="sounds81" src="tom.wav"></audio></div>
+					<div id="sub87">W<audio id="sounds87" src="boom.wav"></audio></div>
+					<div id="sub69">E<audio id="sounds69" src="ride.wav"></audio></div>
+					<div id="sub82">R<audio id="sounds82" src="kick.wav"></audio></div>
+					<div id="sub84">T<audio id="sounds84" src="hihat.wav"></audio></div>
+					<div id="sub89">Y<audio id="sounds89" src="openhat.wav"></audio></div>
+					<div id="sub85">U<audio id="sounds85" src="ride.wav"></audio></div>
+					<div id="sub73">I<audio id="sounds73" src="snare.wav"></audio></div>
+					<div id="sub79">O<audio id="sounds79" src="kick.wav"></audio></div>
+					<div id="sub80">P<audio id="sounds80" src="tom.wav"></audio></div>
+				</div>
+				<div class="two">
+					<div id="sub65">A<audio id="sounds65" src="tom.wav"></audio></div>
+					<div id="sub83">S<audio id="sounds83" src="boom.wav"></audio></div>
+					<div id="sub68">D<audio id="sounds68" src="clap.wav"></audio></div>
+					<div id="sub70">F<audio id="sounds70" src="kick.wav"></audio></div>
+					<div id="sub71">G<audio id="sounds71" src="hihat.wav"></audio></div>
+					<div id="sub72">H<audio id="sounds72" src="openhat.wav"></audio></div>
+					<div id="sub74">J<audio id="sounds74" src="ride.wav"></audio></div>
+					<div id="sub75">K<audio id="sounds75" src="snare.wav"></audio></div>
+					<div id="sub76">L<audio id="sounds76" src="tom.wav"></audio></div>
+				</div>
+				<div class="three">
+					<div id="sub90">Z<audio id="sounds90" src="tom.wav"></audio></div>
+					<div id="sub88">X<audio id="sounds88" src="boom.wav"></audio></div>
+					<div id="sub67">C<audio id="sounds67" src="clap.wav"></audio></div>
+					<div id="sub86">V<audio id="sounds86" src="kick.wav"></audio></div>
+					<div id="sub66">B<audio id="sounds66" src="hihat.wav"></audio></div>
+					<div id="sub78">N<audio id="sounds78" src="openhat.wav"></audio></div>
+					<div id="sub77">M<audio id="sounds77" src="ride.wav"></audio></div>
+				</div>
+				<h1>KEYBOARD.........</h1>
+				
+		</div>
+	</body>
+</html>

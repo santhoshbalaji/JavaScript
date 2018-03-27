@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="http://icons.iconarchive.com/icons/martz90/hex/512/bookmark-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Cormorant+Garamond|Eczar|Gentium+Basic|Inconsolata|Lato|Libre+Baskerville|Libre+Franklin|Montserrat|Noto+Sans|Nunito|Nunito+Sans|Open+Sans|Oswald|Pacifico|Poppins|Proza+Libre|Quicksand|Roboto|Roboto+Condensed|Rubik|Taviraj|Trirong|VT323|Work+Sans"
+        rel="stylesheet">
+    <link rel="stylesheet" href="min-width1224.css" />
+    <!-- media="only screen and (min-width: 1224px)" -->
+    <!-- <link rel="stylesheet" media="only screen and (min-width: 1824px)" href="min-width1824.css" /> -->
+</head>
+
+<body onload=D isplayCategories( 'CatDetails', 'p');colorGenerate();DisplayCategories( 'CatList', 'option');>
+    <div id="Whole">
+        <input type="text" id="addcategory" placeholder="Enter" onkeyup="Addcate(event)" onfocusout="Addcate(event)">
+        <div id="left">
+            <div id="topBarLeft">
+                <h1>BOOKMARK</h1>
+            </div>
+            <div id="BottomLeft">
+                <div id="category">
+                    <details id="CatDetails" open>
+                        <summary>Categories</summary>
+                    </details>
+                    <button onclick="Addcategory('addcategory','addcategory')">
+                        <i class="material-icons">&#xE145;</i>
+                    </button>
+
+                </div>
+                <div id="Displaycategory"></div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="topBarRight">
+                <input type="text" id="searchBox" size="100" placeholder="SEARCH" onkeyup="check()" onfocusout="out()">
+            </div>
+            <div id="BottomRight">
+
+            </div>
+            <div id="Settings_Div" onmouseover="Setting()" onmouseout="Settingout()">
+                <div class="Settings_icons" id="Theme">
+                    <i class="material-icons">color_lens</i>
+                </div>
+                <div class="Settings_icons" id="Font">
+                    <i class="material-icons">font_download</i>
+                </div>
+                <div class="Settings_icons" id="Color" onclick="Change('ColorDiv')">
+                    <i class="material-icons">colorize</i>
+                </div>
+                <div class="Settings_icons" id="Setting">
+                    <i class="material-icons">settings</i>
+                </div>
+            </div>
+            <div class="Right_icons" id="Grid" onclick="Gridview()">
+                <i class="material-icons">grid_on</i>
+            </div>
+            <button class="Right_icons" id="AddUrl" onclick="AddUrl('Form','FormDiv')">
+                <i class="material-icons">&#xE145;</i>
+            </button>
+        </div>
+        <div id="FormDiv" onclick="AddUrl('Form','FormDiv')">
+        </div>
+        <div id="Form">
+            <h6>Add Bookmark
+                <button id="g" onclick="AddUrl('Form','FormDiv')">
+                    <span>&#215;</span>
+                </button>
+            </h6>
+            <h4 class="H">Name : </h4>
+            <input class="H" type="text" id="U" placeholder="Enter name" height="100" required>
+            <h4 class="H">Url : </h4>
+            <input class="H" type="text" id="Uu" placeholder="Enter url" required>
+            <h4 class="H">Category : </h4>
+            <!-- <input class = "H" type = "text" id = "u" placeholder = "Enter category " > -->
+            <select id="CatList">
+                <option>Select</option>
+            </select>
+            <hr>
+            <div id="Btn">
+                <button class="F" id="f" onclick="New()">New Bookmark</button>
+                <button class="F" id="f1" onclick="AddUrl('Form','FormDiv')">Cancel</button>
+            </div>
+        </div>
+        <div id="Delete" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <i class="material-icons">delete</i>
+            <i class="material-icons">delete_sweep</i>
+        </div>
+        <div id='ColorDiv'></div>
+        <div id="colorHideDiv" onclick="AddUrl('ColorDiv','colorHideDiv')">
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+
+    <!-- Leave out Storage -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script> -->
+
+    <script>
+        var config = {
+            // ...
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDQiBgM29kPMYsD8abP_wjdgyZWvPS2zfs",
+            authDomain: "bookmark-6c185.firebaseapp.com",
+            databaseURL: "https://bookmark-6c185.firebaseio.com",
+            projectId: "bookmark-6c185",
+            storageBucket: "bookmark-6c185.appspot.com",
+            messagingSenderId: "25658691601"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

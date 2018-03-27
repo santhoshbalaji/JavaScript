@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Calender</title>
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "index.css">
+    </head>
+    <body onload = "defaultPage()" >
+        <div id = 'whole' >
+            <div id = 'topBar' >
+                <h2>Calender</h2>
+            </div>
+            <div id = 'mainDiv' >
+                <section id = 'naviBar' >
+                        <i id = "arrow-left" class="icon-arrow-left2" onclick = "previous()" ></i>
+                        <div id = "displayBar" onclick = "shift()" ></div>
+                        <i id = "arrow-right" class="icon-arrow-right2" onclick = "next()" ></i>
+                </section>
+                <section id = 'displayCal' >
+                    <div id = "weekDays" ></div>
+                    <div id = "dayDiv" ></div>
+                </section>
+            </div>
+            <div id = "sideDiv" ></div>
+        </div>
+        <!-- <div id = "con" ></div> -->
+        <script src = "index.js" ></script>
+    </body>
+</html>

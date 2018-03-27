@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "calender-santhosh",
+    "staging": "calender-santhosh"
+  }
+}

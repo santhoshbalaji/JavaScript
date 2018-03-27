@@ -1,0 +1,108 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    width:100%;
+    margin:0px;
+}
+#con{
+    position: absolute;
+    top:0%;
+    left:0%;
+    border:1px solid seashell;
+}
+#whole{
+    width:100%;
+    overflow: auto;
+}
+#topBar{
+    height:5vh;
+}
+#topBar > h2{
+    text-align: center;
+}
+#mainDiv{
+    width:80%;
+    font-size: 2vh;
+    border:1px dashed black;
+    float: left;
+}
+#mainDiv > #naviBar > *{
+    float: left;
+    cursor: pointer;
+}
+#sideDiv{
+    width:20%;
+    float: left;
+}
+#sideDiv > *{
+    width:100%;
+    text-align: center;
+}
+#naviBar{
+    width:100%;
+    overflow: auto;
+}
+#naviBar > div{
+    width:75%;
+    margin:0.5%;
+    padding:1%;
+    text-align:center;
+}
+#naviBar > i{
+    margin:0.5%;
+    width:10%;
+    padding:1%;
+    text-align: center;
+}
+#displayCal{
+    width:100%;
+    /* border:1px solid chartreuse; */
+}
+#weekDays{
+    /* margin:3%; */
+    width:100%;
+    overflow: hidden;
+    /* background-color: rgb(141, 136, 136); */
+    color:grey;
+}
+.weekDiv{
+    width:calc(100% / 7);
+    float:left;
+    padding:2.5%;
+    text-align: center;
+    border:1px dashed black;
+}
+#dayDiv{
+    overflow:auto;
+}
+.weekDays{
+    width:calc(100% / 7);
+    height:calc(500px / 7);
+    float:left;
+    padding:2.2%;
+    background-color: rgba(141, 136, 136,0.2);
+    text-align: center;
+    border:1px dashed black;
+}
+.monthDis{
+    width:calc(100% / 4);
+    height:calc(500px / 4);
+    float: left;
+    text-align: center;
+    padding:2.2%;
+    border:1px dashed black;
+}
+.colorChange{
+    background-color:red;
+    color:white;
+}
+.colorChange:hover , .monthDis:hover  , #naviBar > div:hover , #naviBar > i:hover{
+    background-color: rgba(219, 213, 213,0.5);
+}
+.weekHover{
+    background-color: white;
+}
+.weekHover:hover{
+    background-color: rgba(219, 213, 213,0.5);
+}   

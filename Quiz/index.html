@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Quiz</title>
+        <link rel = "stylesheet" href = "index.css">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto+Condensed|Rambla|Convergence|Ropa+Sans|Fira+Sans+Extra+Condensed" rel="stylesheet">
+    </head>
+    <body onkeypress = "enter(event)">
+        <h1 style = "text-align:center;">QUIZ</h1>
+         <h1 style = "text-align:center;">Get Ready For The Questions</h1>
+        <div id = "playBT">
+            <button onclick = "play()" id = "btnsize">press the enter button</button>
+        </div>
+        <div id = "colorbox">
+            <div id = "ques"></div>
+            <div id = "opt"></div>
+            <div id = "ans"></div>
+        </div>
+        <div id = "result"></div>
+        <div id = "lifeline">
+            <div class = "lifeline" id = "fifty" onclick = "fifty()"></div>
+            <div class = "lifeline" id = "audience" onclick = "audience()"></div>
+        </div>
+        <div id = "tempdiv"></div>
+        <script src = "index.js"></script>
+    </body>
+</html>

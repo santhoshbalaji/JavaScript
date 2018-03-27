@@ -1,0 +1,30 @@
+body{
+	transition:background 0.1s;
+}
+#whole{
+	width:200px;
+	margin:50px auto;
+	font-size: 100px;
+	padding:100px;
+	text-align: center;
+	/*transition:background 5s;*/
+	font-family: 'Montserrat', sans-serif;
+	/*border-radius:50%;*/
+}
+#result{
+	width:100px;
+	margin:50px auto;
+	font-size:100px;
+	padding:20px;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+	/*border: 1px solid lavender;*/
+}
+h1{
+	font-size: 50px;
+	text-decoration: blink;
+	text-align: center;
+	margin:100px auto;
+	color:rgba(66,66,66,1);
+	font-family: 'Montserrat', sans-serif;
+}

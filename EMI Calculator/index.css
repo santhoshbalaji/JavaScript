@@ -1,0 +1,23 @@
+body{
+	width:100%;
+}
+*{
+	box-shadow: border-box;
+}
+#main{
+	width:99%;
+	margin:10px auto;
+}
+#input{
+	width:50%;
+	margin:10px auto;
+	overflow: auto;
+}
+.range{
+	padding:20px;
+	float: left;
+}
+#EMIbox{
+	width:100px;
+	height:100px;
+}

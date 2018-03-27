@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<title>EMI Calculator</title>
+		<link rel = "stylesheet" href = "index.css" />
+	</head>
+	<body>
+		<div id = "main">
+			<div id = "input">
+				<div id = "HLAbox" class = "range">
+					<input type = "range" id = "HLA" size = "100" min = "0" max = "20000000" step = "2500000" onchange = "HLAvalue()" value = "1000000"/>
+					<h4>Home Loan Amount</h4>
+					<input type = "text" id = "HLAresult" size = "5"/>
+				</div>
+				<div id = "IRbox" class = "range">
+					<input type = "range" id = "IR" min = "5" max = "20" step = "2.5" value = "5" onchange = "IRvalue()" value = "10.5" />
+					<h4>Interest Rate</h4>
+					<input type = "text" id = "IRresult" size = "5"/>
+				</div>
+				<div id = "LTbox" class = "range">
+					<input type = "range" id = "LT" min = "0" max = "30" step = "5" value = "0" onchange = "LTvalue()" />
+					<h4>Loan Tenure</h4>
+					<input type = "text" id = "LTresult" size = "5"/>
+				</div>
+				<div id = "EMIbox" class = "range">
+					<h4>Loan EMI</h4>
+				</div>
+				<div id = "TIP" class = "range">
+					<h4>Total Payment</h4>
+				</div>
+				<div id = "TP" class = "range">
+					<h4>Total Interest Payable</h4>
+				</div>
+			</div>	
+		</div>
+		<script src = "index.js"></script>
+	</body>
+</html>

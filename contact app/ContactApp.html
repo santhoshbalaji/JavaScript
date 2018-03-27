@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      background-image: url("bg.jpg");
+      background-size: 100% 100%;
+    }
+    #mob{
+      width: 23%;
+      height: 81vh;
+      border: 2.5px solid silver;
+      margin: 4% auto;
+      border-radius: 25px;
+      background-color: white;
+      box-shadow: 20px 20px 25px black;
+    }
+    #screen{
+      width: 93%;
+      height: 68vh;
+    //  background-color: black;
+      margin: 2.2% auto;
+      border: 0.3px solid black;
+    }
+    #selfie{
+      width: 13%;
+      height: 28%;
+      border: 3px solid black;
+      border-radius: 50%;
+      background-color: silver;
+      margin: 15% 80%;
+      float:left;
+    }
+    #speaker{
+      width: 48%;
+      height: 0.7vh;
+      background-color: black;
+      border-radius: 2px;
+      margin: 15% 30%;
+    }
+    #front1{
+      width: 30%;
+      height: 5vh;
+    //  border: 1px solid black;
+      float: left;
+    }
+    #front2{
+      width: 30%;
+      height: 5vh;
+    //  border: 1px solid red;
+      margin-left:3%;
+      float: left;
+    }
+    #front3{
+      width: 30%;
+      height: 5vh;
+      //border: 1px solid blue;
+      margin-left:65%;
+    }
+    #sensor{
+      width: 7%;
+      height: 1.2vh;
+      background-color: black;
+      border-radius: 50%;
+      margin:10% auto;
+    }
+    #flash{
+      width: 10%;
+      height: 1.3vh;
+      background-color: #fffac9;
+      border-radius: 50%;
+      margin-top: -13%;
+      border: 0.3px solid silver;
+    }
+    #name{
+      width: 55%;
+      height: 1.6vh;
+      background-image: url("name.png");
+      background-size: 100% 100%;
+      margin: -2% 27%;
+    }
+    #recents{
+      width: 8%;
+      height: 2vh;
+      /*/border: 1px solid red;*/
+      float: left;
+      background-image: url("re.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      margin:1% 16% ;
+    }
+    #home{
+      width: 35%;
+      height: 3vh;
+    //  border: 1px solid green;
+      float: left;
+      margin-left: -7%;
+    }
+    #back{
+      width: 13%;
+      height: 3vh;
+      //border: 1px solid blue;
+      float: left;
+      background-image: url("bk.png");
+      background-size: 70% 90%;
+      background-repeat: no-repeat;
+      margin-left: 8%;
+    }
+    #hb{
+      width: 50%;
+      height: 2vh;
+      border: 1.5px solid silver;
+      border-radius: 20px;
+      margin: 2% auto;
+    }
+    #notification{
+      width: 99.5%;
+      height: 2vh;
+      background-color: white;
+      margin-left: 0.3px;
+      transition: all 1s;
+    }
+
+    #workplace{
+      width: 99.5%;
+      height: 65.6vh;
+    //  background-color: gray;
+      margin-left: 0.5px;
+    //  border: 2px solid red;
+    }
+    #time{
+      width: 10%;
+      height: 1vh;
+      //background-color: blue;
+      font-size: 80%;
+      float: right;
+      margin-right: -23%;
+    }
+    #battery{
+      width: 6%;
+      height: 2vh;
+      background-image: url("bat.png");
+      background-size: 100% 100%;
+      float: right;
+      margin-right: -13%;
+    }
+    #net{
+      width: 5%;
+      height: 2vh;
+      background-image: url("net.png");
+      background-size: 100% 100%;
+      float: right;
+      margin-right: 32%;
+    }
+    #search{
+      width: 96%;
+      height: 5vh;
+      background-color:#ededed;
+      margin:2% 2%;
+      border-radius: 6px;
+      outline: none;
+      border: 0px;
+      padding-left: 2%;
+    }
+    #tab{
+      width: 99.5%;
+      height: 4vh;
+    //  background-color: gray;
+      margin-left: 0.3px;
+      transition: all 1s;
+    }
+    .button{
+      width: 49%;
+      height: 3.5vh;
+      float: left;
+      margin: 0.5%;
+      background-color: white;
+      border: 0px;
+      outline: none;
+      color: gray;
+    }
+    .button:focus{
+      border-bottom: 1px solid green;
+      color:green;
+    }
+    .button:active{
+      background-color: green;
+    }
+    .list{
+      width: 99.5%;
+      height: 55vh;
+      background-color: #d3d3d3;
+      margin:0.4px;
+    }
+    #list1{
+      background-color: #d3d3d3;
+      display: none;
+    }
+    #create{
+      width: 99.5%;
+      height: 6vh;
+      background-color: white;
+      margin-left: 0.5px;
+      border-bottom: 1px solid silver;
+    }
+    #icon{
+      width: 15%;
+      height:90%;
+      border: 0.3px solid gray;
+      border-radius: 50%;
+    //  background-color: black;
+      margin-left: 2%;
+      background-image: url("cre.png");
+      background-size: 100% 100%;
+      float: left;
+    }
+    #Cpage{
+      width: 99%;
+      height: 64vh;
+      background-color: white;
+      margin: 2.2% auto;
+    //  border: 1px solid black;
+      display: none;
+    }
+    #option{
+      width: 100%;
+      height: 6vh;
+      background-color: #f9f9f9;
+    }
+    .opt{
+      width: 49%;
+      height: 6vh;
+      outline: none;
+      background-color:#f9f9f9;
+      border: 0px;
+      float: left;
+      color: orange;
+    }
+    #img{
+      width:22%;
+      height:13%;
+      border: 0.6px solid black;
+      border-radius: 50%;
+    //  background-color: black;
+      margin: 10% 38%;
+      background-image: url("cam.png");
+      background-size: 100% 90%;
+      background-repeat: no-repeat;
+    }
+    .form{
+      width: 96%;
+      height: 4vh;
+      //background-color:#ededed;
+      margin:2% 2%;
+      border: 0px;
+      outline: none;
+      padding-left: 2%;
+      border-bottom:1px solid gray;
+    }
+    .form:focus{
+      border-bottom:1px solid orange;
+    }
+    #list2{
+      overflow:hidden;
+    }
+    .mem{
+      width: 100%;
+      height: 8vh;
+      background-color: white;
+      text-align: center;
+      margin:1% 1%;
+      font-size: 100%;
+      transition: all 1s;
+    }
+    .mem:hover{
+      background-color: #cecece;
+    }
+    #memlist{
+      width: 98%;
+      height: 62vh;
+      overflow:auto;
+      scroll-behavior:smooth;
+    }
+    #viewer{
+      width: 99%;
+      height: 64.8vh;
+      background-color: white;
+      margin: 2.2% auto;
+      border: 0.5px solid black;
+      display: none;
+    }
+    </style>
+  </head>
+  <body onload="showcontact()">
+    <div id="mob">
+      <div id="front1">
+      <div id="selfie"></div>
+      </div>
+      <div id="front2">
+      <div id="speaker"></div>
+      <div id="name"></div>
+      </div>
+      <div id="front3">
+        <div id="sensor"></div>
+        <div id="flash"></div>
+      </div>
+      <div id="screen">
+        <div id="notification" onclick="notify()">
+          <div id="net"></div>
+          <div id="battery"></div>
+          <div id="time">12:45pm</div>
+        </div>
+        <div id="workplace">
+        <input type="text" id="search" onkeyup="Search()" placeholder="search contact" />
+        <div id="tab">
+          <button class="button" id="fav" type="button" onclick="change(1)" >favorites</button>
+          <button class="button" id="con" type="button" onclick="change(2)" >contacts</button>
+        </div>
+        <div id="list1" class="list"></div>
+        <div id="list2" class="list">
+          <div id="create" onclick="Create()">
+            <div id="icon"></div>
+          <span style="margin-left:12%;"><i>Create Contact</i><span>
+          </div>
+          <div id="memlist"></div>
+        </div>
+      </div>
+      <div id="viewer"></div>
+      <div id="Cpage">
+        <div id="option">
+          <button class="opt" id="op1" type="button" onclick="op(1)"><i>cancel</i></button>
+          <button class="opt" id="op2" type="button" onclick="op(2)"><i>save</i></button>
+        </div>
+        <div id="img"></div>
+          <input type="text" class="form" id="uname" placeholder="Name"/>
+          <input type="text" class="form" id="num" placeholder="Number"/>
+          <input type="text" class="form" id="email" placeholder="Email"/>
+      </div>
+    </div>
+
+      <div id="recents"></div>
+      <div id="home"><div id="hb"></div></div>
+      <div id="back" onclick="op(1)"></div>
+    </div>
+    <script>
+    var contactlist=[["surya","9003251371","surya.sr@zohocorp.com"],["vikky","9845673421","vignesh.mpg@zohocorp.com"],["mani","8903271371","mani.sk@zohocorp.com"],["vignesh","9844373421","vignesh.mpg@zohocorp.com"],["nagaraj","7678954618","nagaraj.rm@zohocorp.com"],["saravanan","896521421","saravanan.g@zohocorp.com"],["vishal","864681371","vishal.v@zohocorp.com"],["karthy","762354667","karthy.m@zohocorp.com"]];
+    var search = "";
+    var turn=0;
+    function showcontact() {
+      for (var i = 0; i < contactlist.length; i++) {
+        document.getElementById('memlist').innerHTML+="<div id='s'"+i+" class='mem' onclick='view("+i+")' ><i>"+contactlist[i][0]+"</i><br>"+contactlist[i][1]+"</div>";
+
+      }
+    }
+    function notify() {
+      turn++;
+      if(turn==1){
+      document.getElementById('notification').style.height="68vh";
+      document.getElementById('notification').style.backgroundColor="whitesmoke";
+      document.getElementById('workplace').style.display="none";
+      }
+      else {
+        turn=0;
+        document.getElementById('notification').style.height="2vh";
+        document.getElementById('notification').style.backgroundColor="white";
+        setTimeout(place,900);
+      }
+    }
+    function place() {
+      document.getElementById('workplace').style.display="block";
+    }
+    function Search() {
+      document.getElementById('memlist').innerHTML="";
+      search = document.getElementById('search').value;
+      for(var i = 0; i<contactlist.length;i++){
+        var index = contactlist[i];
+        for (var j = 0; j < index.length-1; j++) {
+              if(index[j].indexOf(search) > -1){
+                    document.getElementById('memlist').innerHTML+="<div id='s'"+i+" class='mem' onclick='view("+i+")' ><i>"+index[0]+"</i><br>"+index[1]+"</div>";
+              }
+        }
+      }
+      if(search.length<1){
+          document.getElementById('memlist').innerHTML="";
+          showcontact();
+      }
+    }
+    function change(val) {
+      for (var i = 1; i < 3; i++) {
+          if(i==val){
+            document.getElementById('list'+i).style.display="block";
+          }
+          else {
+            document.getElementById('list'+i).style.display="none";
+          }
+        }
+        document.getElementById('Cpage').style.display="none";
+    }
+    function Create() {
+      document.getElementById('workplace').style.display="none";
+      document.getElementById('Cpage').style.display="block";
+    }
+    var I=2;
+    function op(val) {
+      var details=[];
+      if(val==1){
+        document.getElementById('workplace').style.display="block";
+        document.getElementById('Cpage').style.display="none";
+      }
+      else{
+        details.push(document.getElementById('uname').value);
+        details.push(document.getElementById('num').value);
+        details.push(document.getElementById('email').value);
+        contactlist.push(details);
+        I++;
+      }
+    }
+    function view() {
+      document.getElementById('workplace').style.display="none";
+      document.getElementById('viewer').style.display="block";
+    }
+    </script>
+  </body>
+</html>

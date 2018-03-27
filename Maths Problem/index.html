@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title>Maths</title>
+		<style>
+			h1,h3{
+				text-align: center;
+				//margin:0px;
+			}
+			body{
+				background:rgb(194, 194, 214);
+			}
+			#whole{
+				width:800px;
+				margin:10px auto;
+				//background:rgb(224, 224, 235);
+			}
+			#input{
+				width:600px;
+				//height:150px;
+				//background:white;
+				margin:20px auto;
+				padding:20px;
+				text-align: center;
+			}
+			#range{
+				width:300px;
+				margin:auto;
+			}
+			#timer,#result,#opbox{
+				width:150px;
+				height:150px;
+				//background:white;
+				//display:inline-block;
+				float:left;
+				font-size: 100px;
+				margin:20px;
+				margin-left:80px;
+			}
+			.checkbox,#checkbox{
+				width:100px;
+				margin:10px auto;
+			}
+			p{
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "whole">
+			<h1>10 SECONDS OF MATHS</h1>
+			<div id = "input">
+				<h3>Number Limit</h3>
+				<input type = "range" id = "range" min = "10" max = "100" value = "range" onchange = 'range()'  />
+				<input type = "text" disabled id = "rangebox" size = "5" /><br>
+				<input type = "checkbox" class = "checkbox" id = "Addition" value = "+" onclick = 'math(this)'  /><label id = "checkbox" for = "Addition">Add</label>
+				<input type = "checkbox" class = "checkbox" id = "Subtraction" value = "-" onclick = 'math(this)' /><label class = "checkbox" for = "Subtraction">Sub</label><br>
+				<input type = "checkbox" class = "checkbox" id = "Multiplication" value = "*" onclick = 'math(this)'/><label class = "checkbox" for = "Multiplication">Mul</label>
+				<input type = "checkbox" class = "checkbox" id = "Division" value = "/" onclick = 'math(this)' /><label class = "checkbox" for = "Division" width = '100px'>Div</label>
+
+			</div>
+
+			<div id = "result">
+				<input type = "text" disabled id = "eqbox" size = "10" />
+				<input type = "text" id = "resultbox" size = "10" onchange = 'opresult()' onchange = 'timer()' />
+			</div>
+			<div id = "timer" onchange = 'timer()'>
+				<p>10 SECONDS</p>
+			</div>
+			<div id = "opbox" onchange = "opresult()">
+
+			</div>
+		</div>
+		<script>
+			 var num1 ;
+			 var num2 ;
+			 var range;
+			 var result;
+			 var count = 0;
+			 var operator;
+			 var timer1;
+			 var timervalue = false;
+			 function range(){
+			 	range = document.getElementById('range').value;
+			 	document.getElementById('rangebox').value = range;
+			 	console.log(range);
+			 }
+			 function math(op){
+			 	operator = op;
+			 	num1 = Math.round(Math.random() * range);
+			 	num2  = Math.round(Math.random() * range);
+			 	document.getElementById('eqbox').value = num1 +" "+op.value+" "+num2;
+			 	result = eval(num1 +" "+op.value+" "+num2);
+				console.log(result);
+
+			 }
+
+			 var Userresult="";
+			 function opresult(){
+			 	if(!timervalue){
+			 		timervalue = true;
+			 		timer();
+			 	}
+
+				Userresult = document.getElementById('resultbox').value;
+			 	console.log(Userresult);
+			 	if(result == Userresult){
+			 		count++;
+			 		timer1 = 0;
+			 		document.getElementById('opbox').innerHTML = count;
+			 		math(operator);
+			 		timer1 += 10;
+			 		document.getElementById('resultbox').value = "";
+
+			 	}
+
+			 }
+
+			 function timer(){
+			 	document.getElementById('timer').innerHTML = timer1;
+			 	timer1--;
+			 	var newtimer = setTimeout(timer,1000);
+			 	if(timer1 < 0){
+			 		alert("gameover");
+			 		document.getElementById('range').value = 100;
+			 		clearInterval(newtimer);
+			 	}
+
+
+			 }
+
+		</script>
+	</body>
+</html>

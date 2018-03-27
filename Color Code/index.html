@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Color Code</title>
+		<link rel = "stylesheet" href = "index.css" />
+	</head>
+	<body onkeydown = "KeyDwn(event,this)" onkeypress = "KeyMove(event,this)">
+		<div id = "whole">
+			<div id = "hex" >
+				<div id = "hexdivbefore" class = "hex"></div>
+				<div id = "hexdiv" class = "hex" ></div>
+				<div id = "hexdivafter" class = "hex"></div>
+			</div>	
+			<div id = "rgb" >
+				<h1>R</h1>
+				<div class = "rgb" id = "r" >
+					<div class = "ball" id = "ball1" onkeydown = "KeyDwn(event,this)" onkeypress = "KeyMove(event,this)" onmousemove = "Move(event,this)" ></div>
+				</div>
+				<h1>G</h1>
+				<div class = "rgb" id = "g" >
+					<div class = "ball" id = "ball2" onkeydown = "KeyDwn(event,this)" onkeypress = "KeyMove(event,this)" onmousemove = "Move(event,this)" ></div>
+				</div>
+				<h1>B</h1>
+				<div class = "rgb" id = "b" >
+					<div class = "ball" id = "ball3" onkeydown = "KeyDwn(event,this)" onkeypress = "KeyMove(event,this)" onmousemove = "Move(event,this)" ></div>
+				</div>
+			</div>
+			<div id = "RGB1"></div>
+		</div>
+		<script src = "index.js" ></script>
+	</body>
+</html>

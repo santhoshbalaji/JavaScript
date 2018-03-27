@@ -1,0 +1,14 @@
+#display{
+	overflow:auto;
+	margin:40px auto;
+	border:1px solid black;
+}
+.div{
+	width:100px;
+	height:100px;
+	float:left;
+}
+img{
+	width:100px;
+	height:100px;
+}

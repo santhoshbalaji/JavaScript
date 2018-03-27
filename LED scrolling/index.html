@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Led Scrolling</title>
+    </head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: black;
+        }
+        #display{
+            background-color: black;
+            width:33%;
+            height:21vh;
+            margin:50px auto;
+            border:1px solid black;
+            border-radius: 1vh;
+            /* overflow: auto; */
+            padding:0.5%;
+        }
+        .ledDiv{
+            width:2%;
+            height:8%;
+            margin:1%;
+            border:1px solid black;
+            float: left;
+            border-radius: 50%;
+            /* background-color: white; */
+        }
+    </style>
+    <body onload = 'init();generate()' >
+        <div id = "whole" >
+            <div id = "display" ></div>
+        </div>
+        <script src = "index.js" ></script>
+    </body>
+</html>
