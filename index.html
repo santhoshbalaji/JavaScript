@@ -1,10 +1,12 @@
 <html>
     <head>
         <title>MasterPage</title>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
     </head>
     <style>
         * {
             box-sizing: border-box;
+            font-family: 'IBM Plex Serif', serif;
         }
         html {
             width: 100%;
@@ -17,7 +19,7 @@
         }
         header {
             display: flex;
-            height: 10%;
+            height: 100px;
             width: 100%;
             background-color: #F1F1F1;
         }
@@ -37,14 +39,15 @@
         }
         a {
             display: flex;
-            width: 20%;
-            height: 10%;
+            width: 200px;
+            height: 100px;
             float: left;
             background: aliceblue;
             margin: 5%;
             justify-content: center;
             text-align: center;
             align-items: center;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.31), 0 2px 4px 0 rgba(50,50,58,.2);
         }
     </style>
     <body>
@@ -84,6 +87,19 @@
         </div>
     </body>
     <script>
-        console.log(getFiles('../'));
+        var r = 254;
+        var g = 190;
+        var b = 194;
+        var items = document.getElementsByTagName('a');
+        for (i = 0; i < items.length; i++){
+            var item = items[i];
+            if (g >= 255) {
+                b -= 1;
+                console.log(g, b);
+            }
+            g += 1;
+            
+            item.style.backgroundColor = "rgb("+ r +", "+ g +", "+ b +")";
+        }
     </script>
 </html>
