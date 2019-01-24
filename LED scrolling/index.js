@@ -201,7 +201,7 @@ function init(){
         id("display").appendChild(div);
         k++;
         // if(i == 25|i == 50|i == 75|i == 100|i == 125|i == 150|i == 175){
-            if(i%25 == 0){
+        if(i%25 == 0){
             j++;
             k = 1;
         }
@@ -210,12 +210,9 @@ function init(){
 }
 var list = [];
 function generate(){
-    var c = "AB";
+    var c = "AA";
     for(var i = 0; i < c.length; i++){
-        Letter(c.charAt(i));
-        for(var j = 0; j < theLed.length; j++){
-            list.push(theLed);
-        }
+        list.push(Letter(c.charAt(0)));
     }
     console.log(list);
     show();
@@ -224,7 +221,41 @@ var k = 25;
 var l = 0 ;
 var i = 4;
 var j = 0;
+var t = 0;
+var last = 25;
 function show(){
+    // del()
+    for(j = 6; j >= 0; j--){
+        var temp = j + 1;
+        if(list[l][i][j]){
+            // console.log(" l -> "+l+", i -> "+i+", j -> "+j);
+            id("ledDiv"+temp+""+k).style.backgroundColor = "white";
+        }
+    }
+    i--;
+    if(i == -1){
+        i = 4;
+        // init();
+        t = k + 4
+        var time = setTimeout(del,500);
+        
+        
+        // var time = setTimeout(show,100);
+        l++;
+        if(l == list.length){
+            l = 0 ;
+        }
+    } else {
+        var time = setTimeout(show,500);
+    }
+    k--;
+    if(k == 0){
+        k = 25;
+    }
+    
+    // del()
+}
+function move() {
     for(j = 6; j >= 0; j--){
         var temp = j + 1;
         if(list[l][i][j]){
@@ -234,20 +265,52 @@ function show(){
     i--;
     if(i == -1){
         i = 4;
-        init();
+        // init();
+        t = k + 4
+        // del()
+        
+        console.log("Came to i = 4");
+        // var time = setTimeout(show,100);
         l++;
         if(l == list.length){
             l = 0 ;
         }
+    } else {
+        var time = setTimeout(move,500);
     }
-    console.log(l);
     k--;
     if(k == 0){
         k = 25;
     }
-    var time = setTimeout(show,100);
+    // var time = setTimeout(show,100);
 }
 function del(){
-    id("ledDiv"+temp+""+k).style.backgroundColor = "black";
+    
+    for(j = 6; j >= 0; j--){
+        var temp = j + 1;
+        if(list[l][i][j]){
+            id("ledDiv"+temp+""+t).style.backgroundColor = "black";
+        }
+    }
+    i--;
+    
+    if(i == -1){
+        i = 4;
+        // init();
+        var time = setTimeout(move,500);
+        l++;
+        if(l == list.length){
+            l = 0 ;
+        }
+    } else {
+        var time = setTimeout(del,500);
+        
+    }
+    t--;
+    if (t == 0) {
+        t = 25;
+    }
+    // id("ledDiv"+temp+""+last).style.backgroundColor = "black";
+    
 }
 
