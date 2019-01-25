@@ -1,7 +1,7 @@
 function id(idd){
 	return document.getElementById(idd);
 }
-var contacts = ["santhosh,7708362349,1","Surya,9003251371,1"];
+var contacts = ["Peter,1234567890,1","Parker,0987654321,1"];
 var split = [];
 var booleanvalue = true;
 show();
