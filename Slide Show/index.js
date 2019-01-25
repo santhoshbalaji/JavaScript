@@ -1,5 +1,4 @@
-var myimg = ['https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2013/09/12/101029496--sites-default-files-images-101029496-3176173-1748009911-hp.jp-1.jpg?v=1474281478',
-				'http://wallpapercave.com/wp/JQGpuF3.jpg',
+var myimg = [
 				'http://ll-c.ooyala.com/e1/ozbm52YjE6izjqtSRh9ilzTYAg8WWB_h/promo324073730',
 				'http://ddydc3qiky-flywheel.netdna-ssl.com/wp-content/uploads/2016/08/harry-potter-60875721625.jpeg',
 				'http://hdfreewallpaper.net/wp-content/uploads/2016/02/harry-potter-hd-free-wallpaper-free-download.jpg',

@@ -1,32 +1,32 @@
+* {
+	box-sizing: border-box;
+}
 html,body{
-	//background-image:url("https://www.walldevil.com/wallpapers/a30/harry-potter-broom-printable-widescreen-movies-flying.jpg");
 	background-size:100% 100%;
 	background-repeat:no-repeat;
 	width:100%;	
-	height:1080px;
+	height:100%;
 	margin:0px;
 	transition:background-image 1s;		
 }
 #main{
-	//margin-left:550px;
-	//text-align:center;	
-	//border:1px solid red;	
-    width:90%; 
-	padding:10px;
-	margin:auto;
+	width:100%; 
+	height: 100%;
 }
-#buts{
-	margin-left:100px;
-	margin-top:150px;
-} 
 .but:hover{
-	box-shadow:0px 0px 40px #ffffff;
-	//transform:scale(1.5);}         
+	box-shadow:0px 0px 40px #ffffff;  
+} 
+#buts{
+	width: 100%;
+	height: 89%;
+}  
 #buts2{
-	margin-left:100px;
-}           
+	width: 100%;
+	height: 10%;
+	/* margin-left: 90%; */
+
+}        
 .but{
-	//width:200px;
 	color:#19ff47;
 	background-color:rgba(61, 21, 6,0.1);
 	width:70px;
@@ -34,21 +34,21 @@ html,body{
 	border-radius:50%;
 	border:1px solid rgba(61, 21, 6,0.1);
 	font-size: 30px;
-	margin-top: 200px;
+	margin-top: 25%;
+	margin-left: 5%;
 }	
-#but1{
 
-	margin-left:0px;
+#but2 {
+	margin-left: 80%;
 }
-#but2{
 
-	margin-left: 1400px;
-
-}   
+  
 .button{
 	width:100px;
 	height:100px;
-	margin-left: 450px;
-	margin-top:350px;
-}
-   	
+	color:#19ff47;
+	font-size: 30px;
+	border-radius:50%;
+	border:1px solid rgba(61, 21 6,0.1);
+	margin-left: 30%;
+}	
